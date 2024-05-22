@@ -1,0 +1,358 @@
+body {
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(147, 147, 147);
+}
+
+nav {
+    background-color: lightgray;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: red;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+li a:hover {
+    background-color: gray;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(20, 100px);
+    height: 195vh;
+    gap: 10px; 
+}
+
+.parent > div {
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-top-right-radius: 10px;
+    background-color: white;
+}
+
+#d13 {
+    background-image: url(https://pbs.twimg.com/media/GNdb8VBWkAAFF7h?format=jpg&name=900x900);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: white;
+}
+
+#d1 {
+    grid-column: 1/5;
+    grid-row: 3/5;
+}
+
+#d4 {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    background-image: url(data:image/png;base64,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);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-right: 10px;
+}
+
+#d5 {
+    grid-column: 1/5;
+    grid-row: 4/5;
+    background-image: url(https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/red-bull-racing.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d6 {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    text-decoration: underline;
+}
+
+#d2 {
+    grid-column: 5/9;
+    grid-row: 3/5;
+}
+
+#d3 {
+    grid-column: 9/13;
+    grid-row: 3/5;
+}
+
+#d7 {
+    grid-column: 5/9;
+    grid-row: 4/5;
+    background-image: url(https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/ferrari.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d8 {
+    grid-column: 5/8;
+    grid-row: 3/4;
+    text-decoration: underline;
+}
+
+#d9 {
+    grid-column: 8/9;
+    grid-row: 3/4;
+    background-image: url(https://media.formula1.com/content/dam/fom-website/teams/2024/ferrari-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d10 {
+    grid-column: 9/13;
+    grid-row: 4/5;
+    background-image: url(https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/mclaren.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d11 {
+    grid-column: 9/12;
+    grid-row: 3/4;
+    text-decoration: underline;
+}
+
+#d12 {
+    grid-column: 12/13;
+    grid-row: 3/4;
+    background-image: url(https://media.formula1.com/content/dam/fom-website/teams/2024/mclaren-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d14 {
+    grid-column: 1/5;
+    grid-row: 5/7;
+}
+
+#d15 {
+    grid-column: 1/5;
+    grid-row: 6/7; 
+    background-image: url(https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/mercedes.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d16 {
+    grid-column: 1/4;
+    grid-row: 5/6;
+    text-decoration: underline;
+}
+
+#d17 {
+    grid-column: 4/5;
+    grid-row: 5/6;
+    background-image: url(https://media.formula1.com/content/dam/fom-website/teams/2024/mercedes-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d18 {
+    grid-column: 5/9;
+    grid-row: 5/7;
+}
+
+#d19 {
+    grid-column: 5/9;
+    grid-row: 6/7;
+    background-image: url(https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/aston-martin.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d20 {
+    grid-column: 5/8;
+    grid-row: 5/6;
+    text-decoration: underline;
+}
+
+#d21 {
+    grid-column: 8/9;
+    grid-row: 5/6;
+    background-image: url(https://media.formula1.com/content/dam/fom-website/teams/2024/aston-martin-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d13 {
+    grid-column: 4/10;
+    grid-row: 1/3;
+    border: 2px solid black;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#d22 {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    border: none;
+    border-radius: 0px;
+    background-image: url(https://pbs.twimg.com/media/GN9B42cXQAAdxxv?format=jpg&name=900x900);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d23 {
+    grid-column: 10/13;
+    grid-row: 1/3;
+    border: none;
+    border-radius: 0px;
+    background-image: url(https://pbs.twimg.com/media/GNjcaF_XMAA5-oV?format=jpg&name=small);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d24 {
+    grid-column: 9/13;
+    grid-row: 5/7;
+}
+
+#d25 {
+    grid-column: 9/13;
+    grid-row: 6/7;
+    background-image: url(https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/rb.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d26 {
+    grid-column: 12/13;
+    grid-row: 5/6;
+    background-image: url(https://media.formula1.com/content/dam/fom-website/teams/2024/rb-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d27 {
+    grid-column: 9/12;
+    grid-row: 5/6;
+    text-decoration: un;
+} 
+
+#d28 {
+    grid-column: 1/5;
+    grid-row: 7/9;
+}
+
+#d29 {
+    grid-column: 1/5;
+    grid-row: 8/9;
+    background-image: url(https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/haas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d30 {
+    grid-column: 1/4;
+    grid-row: 7/8;
+    text-decoration: underline;
+}
+
+#d31 {
+    grid-column: 4/5;
+    grid-row: 7/8;
+    background-image: url(https://media.formula1.com/content/dam/fom-website/teams/2024/haas-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d32 {
+    grid-column: 5/9;
+    grid-row: 7/9;
+}
+
+#d33 {
+    grid-column: 5/9;
+    grid-row: 8/9;
+    background-image: url(https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/alpine.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d34 {
+    grid-column: 5/8;
+    grid-row: 7/8;
+    text-decoration: underline;
+}
+
+#d35 {
+    grid-column: 8/9;
+    grid-row: 7/8;
+    background-image: url(https://media.formula1.com/content/dam/fom-website/teams/2024/alpine-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d36 {
+    grid-column: 9/13;
+    grid-row: 7/9;
+}
+
+#d37 {
+    grid-column: 9/13;
+    grid-row: 8/9;
+    background-image: url(https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/williams.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d38 {
+    grid-column: 9/12;
+    grid-row: 7/8;
+    text-decoration: underline;
+}
+
+#d39 {
+    grid-column: 12/13;
+    grid-row: 7/8;
+    background-image: url(https://media.formula1.com/content/dam/fom-website/teams/2024/williams-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d40 {
+    grid-column: 5/9;
+    grid-row: 9/11;
+}
+
+#d41 {
+    grid-column: 5/9;
+    grid-row: 10/11;
+    background-image: url(https://media.formula1.com/d_team_car_fallback_image.png/content/dam/fom-website/teams/2024/kick-sauber.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#d42 {
+    grid-column: 5/8;
+    grid-row: 9/10;
+    text-decoration: underline;
+}
+
+#d43 {
+    grid-column: 8/9;
+    grid-row: 9/10;
+    background-image: url(https://media.formula1.com/content/dam/fom-website/teams/2024/kick-sauber-logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
